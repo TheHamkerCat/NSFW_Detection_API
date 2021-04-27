@@ -4,6 +4,8 @@ Rest API Written In Python To Classify NSFW Images.
 [![Python](http://forthebadge.com/images/badges/made-with-python.svg)](https://python.org)
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/TheHamkerCat/)
 
+<img src="https://hamker.me/r3x9rpu.png" width=200 height=200>
+
 # Fastest Solution
 
 If you don't want to selfhost it, there's already an instance of this running [here](https://thearq.tech/nsfw_scan?url=https://hamker.me/8ni586l.png)
@@ -22,11 +24,11 @@ $ python3 -m api
 
 ## Classifies
 
-* Hentai
-* Porn
-* Drawings
-* Neutral
-* Sexy
+* **Hentai** - Hentai and pornographic drawings
+* **Porn** - Pornographic images, sexual acts
+* **Drawings** - Safe for work drawings (including anime)
+* **Neutral** - Safe for work neutral images
+* **Sexy** - Sexually explicit images, not pornography
 
 # Credits
 

@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+aiohttp
+aiofiles
+tensorflow
+tensorflow-hub
+pillow

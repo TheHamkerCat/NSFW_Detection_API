@@ -1,5 +1,6 @@
 from api import predict, app
 from api.functions import download_image
+from config import PORT
 import os
 import uvicorn
 
@@ -18,4 +19,4 @@ async def detect_nsfw(url: str):
     return data
 
 if __name__ == "__main__":
-    uvicorn.run("api:app", host="0.0.0.0", port=8000, log_level="info")
+    uvicorn.run("api:app", host="0.0.0.0", port=PORT, log_level="info")

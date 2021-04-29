@@ -1,5 +1,5 @@
 from api import predict, app
-from api.functions import download_image, calculate_horny
+from api.functions import download_image
 from config import PORT
 import os
 import uvicorn
@@ -21,12 +21,14 @@ async def detect_nsfw(url: str):
     porn = results['data']['porn']
     drawings = results['data']['drawings']
     neutral = results['data']['neutral']
-    hornyfactor = await calculate_horny(hentai, neutral, porn, sexy)
-    if neutral >= 20 or drawings >= 30:
+    if neutral >= 25:
         results['data']['is_nsfw'] = False
         return results
-    elif hornyfactor >= 30:
+    elif (sexy + porn + hentai) >= 70:
         results['data']['is_nsfw'] = True
+        return results
+    elif drawings >= 40:
+        results['data']['is_nsfw'] = False
         return results
     else:
         results['data']['is_nsfw'] = False

@@ -33,3 +33,5 @@ $ python3 -m api
 # Credits
 
 Thanks to https://github.com/GantMan/nsfw_model/ for their model.
+
+Diagram https://drive.google.com/file/d/14b4RDt7kIIl2m-5YQF6yHVmS0nH81U7c/view?usp=sharing

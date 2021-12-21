@@ -7,8 +7,6 @@ import os
 import uvicorn
 
 model = predict.load_model('nsfw_detector/nsfw_model.h5')
-
-
 app = FastAPI()
 
 @app.get("/")

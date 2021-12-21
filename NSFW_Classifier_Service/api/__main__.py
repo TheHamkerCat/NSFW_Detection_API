@@ -1,11 +1,15 @@
-from api import predict, app
-from api.functions import download_image
+from fastapi import FastAPI
+from nsfw_detector import predict
+
+from functions import download_image
 from config import PORT
 import os
 import uvicorn
 
 model = predict.load_model('nsfw_detector/nsfw_model.h5')
 
+
+app = FastAPI()
 
 @app.get("/")
 async def detect_nsfw(url: str):
@@ -35,4 +39,4 @@ async def detect_nsfw(url: str):
         return results
 
 if __name__ == "__main__":
-    uvicorn.run("api:app", host="0.0.0.0", port=PORT, log_level="info")
+    uvicorn.run(app, host="0.0.0.0", port=PORT, log_level="info")

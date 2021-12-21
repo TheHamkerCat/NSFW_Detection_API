@@ -1,20 +1,34 @@
 version: "3"
 
 services:
+#_Classifier____________________________________________
+  # nsfw_classifier_load_balancer:
+  #   container_name: classifier_load_balancer
+  #   image: nginx
+
+
   nsfw_classifier_service:
     container_name: nsfw_classifier
     build: /NSFW_Classifier_Service/.
-    volumes:
-      - nsfw_classifier_volume:/home/nsfw_classifier
     ports:
       - 8000:8000
-    
-  ml_bot:
-    container_name: nsfw_bot
 
-  images_dwnld_service:
-    container_name: images_download_service
+#_Telegram_bot__________________________________________
+  # ml_bot:
+  #   container_name: nsfw_bot
+  #   build: /ML_Bot/.
+  #   ports:
+  #     - 8001:8000
 
-  banned_links_service:
-    container_name: ban_service
-    
+
+  # images_dwnld_service:
+  #   container_name: images_download_service
+  #   build: /Images_Downloader_Service/.
+  #   ports:
+  #     - 8002:8000
+
+  # banned_links_service:
+  #   build: /Banned_Links_Service/.
+  #   container_name: ban_service
+  #   ports:
+  #     - 8003:8000

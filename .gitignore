@@ -2,3 +2,5 @@
 *.png
 *.webp
 *.tmp
+
+__pycache__

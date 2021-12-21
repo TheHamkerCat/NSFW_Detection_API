@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  nsfw_classifier_service:
+    container_name: nsfw_classifier
+    build: /NSFW_Classifier_Service/.
+    volumes:
+      - nsfw_classifier_volume:/home/nsfw_classifier
+    ports:
+      - 8000:8000
+    
+  ml_bot:
+    container_name: nsfw_bot
+
+  images_dwnld_service:
+    container_name: images_download_service
+
+  banned_links_service:
+    container_name: ban_service
+    

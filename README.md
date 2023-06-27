@@ -4,11 +4,7 @@ Rest API Written In Python To Classify NSFW Images.
 [![Python](http://forthebadge.com/images/badges/made-with-python.svg)](https://python.org)
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/TheHamkerCat/)
 
-<img src="https://hamker.me/r3x9rpu.png" width=200 height=200>
-
-# Fastest Solution
-
-If you don't want to selfhost it, there's already an instance of this running [here](https://thearq.tech/nsfw_scan?url=https://hamker.me/8ni586l.png)
+<img src="https://thereader.mitpress.mit.edu/wp-content/uploads/2019/10/nsfw-hed.jpg" width=400 height=200>
 
 ## Install Locally Or On A VPS
 
@@ -20,6 +16,16 @@ $ cd NSFW_Detection_API
 $ pip3 install -U -r requirements.txt
 
 $ python3 -m api
+```
+
+## Docker
+
+```sh
+$ git clone https://github.com/thehamkercat/NSFW_Detection_API
+
+$ cd NSFW_Detection_API
+
+$ docker-compose up -d
 ```
 
 ## Classifies

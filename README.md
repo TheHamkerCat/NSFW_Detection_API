@@ -28,6 +28,13 @@ $ cd NSFW_Detection_API
 $ docker-compose up -d
 ```
 
+## Usage
+
+```sh
+$ curl --request GET \
+  --url 'http://localhost:8001/?url=https%3A%2F%2Fwww.inferdo.com%2Fimg%2Fnsfw-1-raw.jpg'
+```
+
 ## Classifies
 
 * **Hentai** - Hentai and pornographic drawings

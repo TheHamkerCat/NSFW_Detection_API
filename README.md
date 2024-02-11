@@ -28,6 +28,14 @@ $ cd NSFW_Detection_API
 $ docker-compose up -d
 ```
 
+
+## Usage 
+
+```sh
+$ curl --request GET \
+  --url 'http://localhost:8001/?url=https%3A%2F%2Fcdn.stocksnap.io%2Fimg-thumbs%2F960w%2Fwoman-model_LCPHH1BDI2.jpg'
+```
+
 ## Classifies
 
 * **Hentai** - Hentai and pornographic drawings
